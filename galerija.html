@@ -1,0 +1,407 @@
+    <!DOCTYPE html>
+    <html>
+        <head>
+              <meta charset="UTF-8">
+              <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>KUD Ploče – Službena stranica</title>
+
+    <link rel="icon" href="logo.jpeg" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background: #F7F3E9;
+            color: #292929;
+        }
+
+        /* ZAGLAVLJE */
+
+        header {
+            background: #C92332;
+            color: white;
+            padding: 16px 7%;
+            position: relative;
+            z-index: 100;
+        }
+
+        .header-main {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+        }
+
+        .logo {
+            width: 85px;
+            height: 85px;
+            border-radius: 50%;
+            background: white;
+            object-fit: contain;
+            padding: 5px;
+        }
+
+        .header-title {
+            flex: 1;
+        }
+
+        .header-title h1 {
+            font-size: 30px;
+            letter-spacing: 2px;
+        }
+
+        .header-title p {
+            font-size: 12px;
+            letter-spacing: 2px;
+        }
+
+        /* TIPKA MENU */
+
+        .menu-button {
+            display: block;
+            background: transparent;
+            border: 2px solid white;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 7px;
+            font-size: 28px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .menu-button:hover {
+            background: white;
+            color: #C92332;
+        }
+
+        /* NAVIGACIJA */
+
+        nav {
+            display: none;
+            flex-direction: column;
+            position: absolute;
+            top: 100%;
+            right: 7%;
+            width: 240px;
+            background: #A91D2A;
+            border-radius: 0 0 10px 10px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+        }
+
+        nav.active {
+            display: flex;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 16px 20px;
+            font-weight: 600;
+            border-bottom: 1px solid rgba(255,255,255,0.15);
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            background: #8F1723;
+            color: #E9BD48;
+            padding-left: 27px;
+        }
+ 
+       /* PRIDRUŽI NAM SE */
+
+        .join {
+            background: #C92332;
+            color: white;
+            text-align: center;
+        }
+
+        .join .section-title {
+            color: white;
+        }
+
+        .join p {
+            max-width: 700px;
+            margin: auto;
+            line-height: 1.8;
+        }
+
+        .contact-button {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 14px 30px;
+            background: #E9BD48;
+            color: #292929;
+            border-radius: 7px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: 0.3s;
+        }
+
+        .contact-button:hover {
+            background: white;
+        }
+
+        /* PODNOŽJE */
+
+        footer {
+            background: #292929;
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            line-height: 2;
+        }
+
+        footer h2 {
+            font-family: 'Playfair Display', serif;
+            margin-bottom: 8px;
+        }
+
+        footer a {
+            color: #E9BD48;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* MOBITELI */
+        @media (max-width: 850px) {
+
+            header {
+                padding: 15px 5%;
+            }
+
+            .logo {
+                width: 68px;
+                height: 68px;
+            }
+
+            .header-title h1 {
+                font-size: 23px;
+            }
+
+            .header-title p {
+                font-size: 9px;
+                letter-spacing: 1px;
+            }
+
+            .menu-button {
+                font-size: 25px;
+                padding: 7px 12px;
+            }
+
+            nav {
+                right: 5%;
+                width: 220px;
+            }
+
+            .about,
+            .cards,
+            .news-container {
+                grid-template-columns: 1fr;
+            }
+
+            .heritage-images {
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                padding: 55px 6%;
+            }
+
+            .hero {
+                min-height: 430px;
+            }
+
+            .section-title {
+                font-size: 32px;
+            }
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- ZAGLAVLJE -->
+
+    <header>
+
+        <div class="header-main">
+
+            <img src="logo.jpeg"
+                 alt="Logo KUD Ploče"
+                 class="logo">
+
+            <div class="header-title">
+                <h1>KUD PLOČE</h1>
+                <p>KULTURNO-UMJETNIČKO DRUŠTVO</p>
+            </div>
+
+            <button class="menu-button"
+                    onclick="toggleMenu()"
+                    aria-label="Otvori navigaciju"
+                    aria-expanded="false"
+                    id="menuButton">
+                ☰
+            </button>
+
+        </div>
+
+        <nav id="navigation">
+
+            <a href="index.html">Početna</a>
+
+            <a href="nastupi.html">Nastupi</a>
+
+            <a href="galerija.html">Galerija</a>
+
+        </nav>
+
+    </header>
+
+    <!-- PRIDRUŽI NAM SE -->
+
+    <section class="join">
+
+        <h2 class="section-title">
+            Postanite dio naše priče
+        </h2>
+
+        <p>
+
+            Volite folklor, tradiciju, pjesmu i ples?
+
+            Pridružite nam se i postanite dio našega društva.
+            Veselimo se novim članovima i zajedničkom očuvanju tradicije.
+
+        </p>
+
+        <a href="kontakt_g.html" class="contact-button">
+            Kontaktirajte nas
+        </a>
+
+    </section>
+
+    <footer id="kontakt">
+
+        <h2>KUD PLOČE</h2>
+
+        <p>Kulturno-umjetničko društvo Ploče</p>
+
+        <p>
+            E-mail:
+            <a href="mailto:vas-email@example.com">
+                mail
+            </a>
+        </p>
+
+        <p>
+            Instagram:
+            <a href="https://www.instagram.com/kud_ploce_?hvrq=MXZ6bXV0Z2R0YWkxaQ==" target="_blank">
+                KUD Ploče
+            </a>
+        </p>
+
+        <p>
+            Facebook:
+            <a href="https://www.facebook.com/share/1FKbYefEy6/" target="_blank">
+                KUD Ploče
+            </a>
+        </p>
+
+        <p>
+            TikTok:
+            <a href="#" target="_blank">
+                KUD Ploče
+            </a>
+        </p>
+
+        <p>
+            © <span id="year"></span> KUD Ploče.
+            Sva prava pridržana.
+        </p>
+
+    </footer>
+    <script>
+
+        function toggleMenu() {
+
+            const navigation =
+                document.getElementById("navigation");
+
+            const button =
+                document.getElementById("menuButton");
+
+            navigation.classList.toggle("active");
+
+            button.setAttribute(
+                "aria-expanded",
+                navigation.classList.contains("active")
+            );
+
+        }
+
+        // Zatvaranje MENU-a nakon odabira stranice
+
+        document.querySelectorAll("#navigation a").forEach(link => {
+
+            link.addEventListener("click", function() {
+
+                document.getElementById("navigation")
+                    .classList.remove("active");
+
+                document.getElementById("menuButton")
+                    .setAttribute("aria-expanded", "false");
+
+            });
+
+        });
+
+        // Zatvaranje klikom izvan izbornika
+
+        document.addEventListener("click", function(event) {
+
+            const navigation =
+                document.getElementById("navigation");
+
+            const button =
+                document.getElementById("menuButton");
+
+            if (
+                !navigation.contains(event.target) &&
+                !button.contains(event.target)
+            ) {
+
+                navigation.classList.remove("active");
+
+                button.setAttribute("aria-expanded", "false");
+
+            }
+
+        });
+
+        // Automatska godina
+
+        document.getElementById("year").textContent =
+            new Date().getFullYear();
+
+    </script>
+
+   
+    </body>
+    </html>

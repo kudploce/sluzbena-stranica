@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt | KUD Ploče</title>
+    <link rel="icon" href="logo.jpeg" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #F7F3E9;
+            color: #292929;
+        }
+
+        /* POZADINA */
+        .kontakt-pozadina {
+            min-height: 100vh;
+            padding: 70px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            background:
+                linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.82)),
+                url("assets/images/kontakt-pozadina.jpg");
+
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* KONTAKTNI PROZOR */
+        .kontakt-container {
+            background: #F7F3E9;
+            width: 100%;
+            max-width: 650px;
+            padding: 45px;
+            border-radius: 15px;
+            box-shadow: 0 15px 45px rgba(0,0,0,0.4);
+        }
+
+        .povratak {
+            display: inline-block;
+            color: #C92332;
+            text-decoration: none;
+            font-weight: bold;
+            margin-bottom: 25px;
+        }
+
+        h1 {
+            color: #C92332;
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 12px;
+        }
+
+        .uvod {
+            text-align: center;
+            color: #666;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        /* FORMA */
+        input, textarea {
+            width: 100%;
+            padding: 14px;
+            margin-bottom: 17px;
+            border: 1px solid #ddd;
+            border-radius: 7px;
+            font-size: 15px;
+            font-family: Arial, sans-serif;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        .posalji {
+            width: 100%;
+            padding: 15px;
+            background: #C92332;
+            color: white;
+            border: none;
+            border-radius: 7px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .posalji:hover {
+            background: #a91d2a;
+        }
+
+        .kontakt-podaci {
+            text-align: center;
+            margin-top: 30px;
+            line-height: 1.9;
+            color: #555;
+        }
+
+        @media (max-width: 600px) {
+            .kontakt-container {
+                padding: 30px 20px;
+            }
+
+            h1 {
+                font-size: 29px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <main class="kontakt-pozadina">
+
+        <div class="kontakt-container">
+
+            <a href="galerija.html" class="povratak">← Povratak na galeriju</a>
+
+            <h1>Kontaktirajte nas</h1>
+
+            <p class="uvod">
+                Želite saznati više o KUD-u Ploče,
+                našim nastupima ili sekcijama?
+                Slobodno nam se javite!
+            </p>
+
+            <form action="#" method="POST">
+
+                <input type="text" name="ime"
+                    placeholder="Vaše ime i prezime" required>
+
+                <input type="email" name="email"
+                    placeholder="Vaša e-mail adresa" required>
+
+                <input type="text" name="naslov"
+                    placeholder="Naslov poruke">
+
+                <textarea name="poruka" rows="5"
+                    placeholder="Napišite svoju poruku..." required></textarea>
+
+                <button type="submit" class="posalji">
+                    Pošalji poruku
+                </button>
+
+            </form>
+
+            <div class="kontakt-podaci">
+                <p><strong>KUD Ploče</strong></p>
+                <p>Ploče, Hrvatska</p>
+                <p>Ovdje dodaj e-mail i telefon društva</p>
+            </div>
+
+        </div>
+
+    </main>
+
+</body>
+</html>
