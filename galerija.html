@@ -273,6 +273,176 @@
         </nav>
 
     </header>
+    <main class="galerija-main">
+
+    <section class="galerija-naslov">
+        <h1>Galerija fotografija</h1>
+        <p>Uspomene, nastupi, događaji i trenuci iz života KUD-a Ploče.</p>
+    </section>
+
+    <section class="galerija-grid">
+
+        <!-- VELIKA FOTOGRAFIJA -->
+        <div class="galerija-item velika">
+            <img src="g1.jpeg" alt="Nastup KUD-a Ploče">
+        </div>
+
+        <!-- MANJA FOTOGRAFIJA -->
+        <div class="galerija-item">
+            <img src="g2.jpeg" alt="Članovi KUD-a">
+        </div>
+
+        <div class="galerija-item visoka">
+            <img src="g3.jpeg" alt="Tradicionalna nošnja">
+        </div>
+
+        <div class="galerija-item siroka">
+            <img src="g4.jpeg" alt="Kulturni događaj">
+        </div>
+
+        <div class="galerija-item">
+            <img src="g5.jpeg" alt="Druženje članova">
+        </div>
+
+        <div class="galerija-item velika">
+            <img src="g6.jpeg" alt="Folklorni nastup">
+        </div>
+
+        <div class="galerija-item">
+            <img src="slike/galerija/slika7.jpg" alt="KUD Ploče">
+        </div>
+
+        <div class="galerija-item">
+            <img src="slike/galerija/slika8.jpg" alt="KUD Ploče">
+        </div>
+
+        <div class="galerija-item siroka">
+            <img src="slike/galerija/slika9.jpg" alt="KUD Ploče">
+        </div>
+
+    </section>
+
+</main>
+
+<style>
+.galerija-main {
+    padding: 55px 7%;
+    background: #f7f6ef;
+    min-height: 500px;
+}
+
+.galerija-naslov {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.galerija-naslov h1 {
+    font-size: 36px;
+    color: #263d2c;
+    margin-bottom: 10px;
+}
+
+.galerija-naslov p {
+    color: #666;
+    font-size: 16px;
+}
+
+.galerija-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 180px;
+    grid-auto-flow: dense;
+    gap: 16px;
+    max-width: 1250px;
+    margin: auto;
+}
+
+.galerija-item {
+    overflow: hidden;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.galerija-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.galerija-item:hover img {
+    transform: scale(1.07);
+}
+
+.galerija-item.velika {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.galerija-item.visoka {
+    grid-row: span 2;
+}
+
+.galerija-item.siroka {
+    grid-column: span 2;
+}
+
+@media (max-width: 750px) {
+    .galerija-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 145px;
+        gap: 10px;
+    }
+
+    .galerija-item.velika {
+        grid-column: span 2;
+        grid-row: span 2;
+    }
+
+    .galerija-item.visoka {
+        grid-row: span 2;
+    }
+
+    .galerija-naslov h1 {
+        font-size: 28px;
+    }
+}
+</style>
+
+<script>
+document.querySelectorAll('.galerija-item img').forEach(slika => {
+    slika.addEventListener('click', () => {
+        const prozor = document.createElement('div');
+
+        prozor.style.cssText = `
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.93);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            cursor: zoom-out;
+            padding: 25px;
+        `;
+
+        const velikaSlika = document.createElement('img');
+        velikaSlika.src = slika.src;
+        velikaSlika.style.cssText = `
+            max-width: 95%;
+            max-height: 90%;
+            object-fit: contain;
+            border-radius: 8px;
+        `;
+
+        prozor.appendChild(velikaSlika);
+        prozor.onclick = () => prozor.remove();
+
+        document.body.appendChild(prozor);
+    });
+});
+</script>
 
     <!-- PRIDRUŽI NAM SE -->
 
