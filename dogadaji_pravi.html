@@ -230,6 +230,234 @@
                 font-size: 32px;
             }
         }
+        /* DOGAĐAJI */
+
+.events-section {
+    max-width: 1150px;
+    margin: 65px auto;
+    padding: 0 20px;
+}
+
+.events-heading {
+    margin-bottom: 35px;
+}
+
+.events-heading h2 {
+    font-size: 30px;
+    color: #263d2c;
+    margin-bottom: 12px;
+}
+
+.events-heading p {
+    color: #777;
+    line-height: 1.7;
+}
+
+.event-card {
+    display: flex;
+    background: white;
+    border-radius: 14px;
+    overflow: hidden;
+    margin-bottom: 35px;
+    min-height: 300px;
+    box-shadow: 0 5px 22px rgba(0,0,0,.07);
+}
+
+.event-card:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.event-card img {
+    width: 50%;
+    min-height: 300px;
+    object-fit: cover;
+}
+
+.event-content {
+    width: 50%;
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.event-label {
+    color: #a8874d;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    margin-bottom: 15px;
+}
+
+.event-content h3 {
+    font-size: 27px;
+    margin-bottom: 15px;
+    color: #263d2c;
+}
+
+.event-content p {
+    color: #666;
+    line-height: 1.8;
+}
+
+.event-details {
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 2;
+}
+
+.events-archive {
+    background: #eeeae0;
+    padding: 65px 20px;
+    text-align: center;
+    margin-top: 65px;
+}
+
+.events-archive h2 {
+    margin-bottom: 15px;
+    font-size: 30px;
+}
+
+.events-archive p {
+    color: #666;
+    line-height: 1.8;
+}
+
+@media(max-width: 750px) {
+    .event-card,
+    .event-card:nth-child(even) {
+        flex-direction: column;
+    }
+
+    .event-card img {
+        width: 100%;
+        height: 240px;
+        min-height: 240px;
+    }
+
+    .event-content {
+        width: 100%;
+        padding: 25px;
+    }
+
+    .event-content h3 {
+        font-size: 23px;
+    }
+}
+.events-section {
+    max-width: 1150px;
+    margin: 65px auto;
+    padding: 0 20px;
+}
+
+.events-heading {
+    margin-bottom: 35px;
+}
+
+.events-heading h2 {
+    font-size: 30px;
+    color: #263d2c;
+    margin-bottom: 12px;
+}
+
+.events-heading p {
+    color: #777;
+    line-height: 1.7;
+}
+
+.event-card {
+    display: flex;
+    background: white;
+    border-radius: 14px;
+    overflow: hidden;
+    margin-bottom: 35px;
+    min-height: 300px;
+    box-shadow: 0 5px 22px rgba(0,0,0,.07);
+}
+
+.event-card:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.event-card img {
+    width: 50%;
+    min-height: 300px;
+    object-fit: cover;
+}
+
+.event-content {
+    width: 50%;
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.event-label {
+    color: #a8874d;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    margin-bottom: 15px;
+}
+
+.event-content h3 {
+    font-size: 27px;
+    margin-bottom: 15px;
+    color: #263d2c;
+}
+
+.event-content p {
+    color: #666;
+    line-height: 1.8;
+}
+
+.event-details {
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 2;
+}
+
+.events-archive {
+    background: #eeeae0;
+    padding: 65px 20px;
+    text-align: center;
+    margin-top: 65px;
+}
+
+.events-archive h2 {
+    margin-bottom: 15px;
+    font-size: 30px;
+}
+
+.events-archive p {
+    color: #666;
+    line-height: 1.8;
+}
+
+@media(max-width: 750px) {
+    .event-card,
+    .event-card:nth-child(even) {
+        flex-direction: column;
+    }
+
+    .event-card img {
+        width: 100%;
+        height: 240px;
+        min-height: 240px;
+    }
+
+    .event-content {
+        width: 100%;
+        padding: 25px;
+    }
+
+    .event-content h3 {
+        font-size: 23px;
+    }
+}
 
     </style>
 
@@ -266,7 +494,7 @@
 
             <a href="index.html">Početna</a>
 
-            <a href="nastupi.html">Nastupi</a>
+            <a href="dogadaji.html">Naši događaji</a>
 
             <a href="galerija.html">Galerija</a>
 
@@ -274,6 +502,68 @@
 
     </header>
 
+    <main>
+
+    <!-- UVOD -->
+
+    <section class="events-section">
+
+        <div class="events-heading">
+            <h2>Naši događaji</h2>
+            <p>
+                KUD Ploče organizira kulturne i folklorne
+                događaje kojima čuvamo tradiciju, okupljamo
+                ljude i obogaćujemo kulturni život našega kraja.
+            </p>
+        </div>
+
+    </section>
+
+    <section class="events-section">
+
+        <article class="event-card">
+            <img src="slike/dogadaj-1.jpg"
+                 alt="slika">
+
+            <div class="event-content">
+                <h3>Naziv događaja</h3>
+
+                <p>
+                    Ovdje upišite opis događaja koji
+                    organizira KUD Ploče i predstavite
+                    program koji pripremate.
+                </p>
+
+                <div class="event-details">
+                    📅 Datum: Uskoro<br>
+                    📍 Lokacija: Ploče
+                </div>
+            </div>
+        </article>
+        
+        <article class="event-card">
+            <img src="slike/dogadaj-1.jpg"
+                 alt="slika">
+
+            <div class="event-content">
+                <h3>Naziv događaja</h3>
+
+                <p>
+                    Ovdje upišite opis događaja koji
+                    organizira KUD Ploče i predstavite
+                    program koji pripremate.
+                </p>
+
+                <div class="event-details">
+                    📅 Datum: Uskoro<br>
+                    📍 Lokacija: Ploče
+                </div>
+            </div>
+        </article>
+
+
+    </section>
+    </main>
     <!-- PRIDRUŽI NAM SE -->
 
     <section class="join">
@@ -291,7 +581,7 @@
 
         </p>
 
-        <a href="kontakt_n.html" class="contact-button">
+        <a href="kontakt_d.html" class="contact-button">
             Kontaktirajte nas
         </a>
 
